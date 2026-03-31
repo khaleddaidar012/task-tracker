@@ -11,9 +11,13 @@ export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+ useEffect(() => {
+  const timer = setTimeout(() => {
     setMounted(true);
-  }, []);
+  }, 0);
+
+  return () => clearTimeout(timer);
+}, []);
 
   // Close when clicking outside
   useEffect(() => {
