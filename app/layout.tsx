@@ -3,6 +3,7 @@ import { Cairo } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const cairo = Cairo({
   subsets: ["latin", "arabic"],
@@ -28,6 +29,7 @@ export default function RootLayout({
             <ThemeSwitcher />
           </div>
           {children}
+          <WhatsAppButton />
         </ThemeProvider>
       </body>
     </html>
